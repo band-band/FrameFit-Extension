@@ -2,7 +2,7 @@
 
 Last updated: September 28, 2026
 
-This policy describes FrameFit 2.4.4, maintained by the GitHub account
+This policy describes FrameFit 2.4.5, maintained by the GitHub account
 [band-band](https://github.com/band-band).
 
 ## What FrameFit does
