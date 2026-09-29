@@ -1,3 +1,5 @@
+<img src="./framefit-logo.png" alt="FrameFit logo" width="80" height="80">
+
 # FrameFit Extension
 
 Current version: **2.4.2**
@@ -5,6 +7,10 @@ Current version: **2.4.2**
 [Download FrameFit Extension.zip](./FrameFit%20Extension.zip?raw=true)
 
 FrameFit lets you watch video in a compact browser window, fill the current tab, or use native Picture-in-Picture. Includes global and per-site switches and four menu themes.
+
+## Menu preview
+
+<img src="./framefit-menu.jpg" alt="FrameFit menu in Light purple, showing viewing modes and per-site settings" width="360">
 
 ## Install
 
@@ -30,3 +36,4 @@ This repository distributes the installable extension only. Development tools, t
 Version 2.4.2 removes the floating Minimize control and fully removes the compact tip panel when dismissed. This distribution contains the unchanged 2.4.2 extension.
 
 [Privacy policy](PRIVACY.md)
+
