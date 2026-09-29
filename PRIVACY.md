@@ -2,7 +2,7 @@
 
 Last updated: September 28, 2026
 
-This policy describes FrameFit 2.4.2, maintained by the GitHub account
+This policy describes FrameFit 2.4.3, maintained by the GitHub account
 [band-band](https://github.com/band-band).
 
 ## What FrameFit does
@@ -70,4 +70,3 @@ passwords, private browsing details, or other sensitive information in a public 
 
 The close-confirmation and hide-compact-tip preferences are also stored locally.
 They are not transmitted to the developer or third parties.
-

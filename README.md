@@ -2,7 +2,7 @@
 
 # FrameFit Extension
 
-Current version: **2.4.2**
+Current version: **2.4.3**
 
 [Download FrameFit Extension.zip](./FrameFit%20Extension.zip?raw=true)
 
@@ -33,7 +33,8 @@ For updates, exit compact view, replace the contents of your existing installati
 
 This repository distributes the installable extension only. Development tools, tests, editable artwork, and development history are maintained separately. The ZIP necessarily includes the JavaScript, HTML, CSS, and images Chrome runs; those bundled files can be inspected.
 
-Version 2.4.2 removes the floating Minimize control and fully removes the compact tip panel when dismissed. This distribution contains the unchanged 2.4.2 extension.
+Version 2.4.3 opens compact view in a smaller normal window, handles responsive YouTube player moves, keeps its bottom controls inside the player, and makes its fullscreen button toggle back out. X/Twitter uses its video-and-controls component for expansion and supports the English-labeled fullscreen toggle. The floating Minimize control remains removed.
+
+Validated with simulated Chrome APIs and browser fixtures. Live YouTube/X playback and the originally reported small-window failure still need an installed-Chrome smoke test.
 
 [Privacy policy](PRIVACY.md)
-
