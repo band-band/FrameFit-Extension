@@ -2,7 +2,7 @@
 
 # FrameFit Extension
 
-Current version: **2.4.5**
+Current version: **2.4.6**
 
 [Download FrameFit Extension.zip](./FrameFit%20Extension.zip?raw=true)
 
@@ -33,8 +33,8 @@ For updates, exit compact view, replace the contents of your existing installati
 
 This repository distributes the installable extension only. Development tools, tests, editable artwork, and development history are maintained separately. The ZIP necessarily includes the JavaScript, HTML, CSS, and images Chrome runs; those bundled files can be inspected.
 
-Version 2.4.5 adds explicit YouTube video and control sizing on entry and after Escape or fullscreen-button exit, including later browser resizing in both Fill current tab and compact mode. It retains the previous improvements: FrameFit opens compact view in a smaller normal window, handles responsive YouTube player moves, keeps its bottom controls inside the player, and makes its fullscreen button toggle back out. X/Twitter uses its video-and-controls component for expansion and supports the English-labeled fullscreen toggle. The floating Minimize control remains removed.
+Version 2.4.6 fixes X black screens caused by page updates and preserves already-playing videos during expansion, while respecting manual pause. It retains explicit YouTube video and control sizing on entry and after Escape or fullscreen-button exit, including later browser resizing in both Fill current tab and compact mode. It retains the previous improvements: FrameFit opens compact view in a smaller normal window, handles responsive YouTube player moves, keeps its bottom controls inside the player, and makes its fullscreen button toggle back out. X/Twitter uses its video-and-controls component for expansion and supports the English-labeled fullscreen toggle. The floating Minimize control remains removed.
 
-Validated with 30 simulated background/settings checks and 45 YouTube fixture checks at two viewport sizes. Live YouTube fullscreen-button entry/exit was checked in the in-app browser, and the user reported both modes looked good afterward. Full installed-Chrome coverage, native dialogs, and the original disappearing-video report remain unverified.
+Targeted X class-replacement and playback-recovery fixtures passed, and live X playback continued through repeated expansion and exit without a manual Play click in the in-app browser. The full X fixture remains inconclusive because the installed extension interferes with its keyboard check. Native compact-window playback and Chrome dialogs still need separate verification. Previous YouTube validation is recorded in the development repository.
 
 [Privacy policy](PRIVACY.md)
