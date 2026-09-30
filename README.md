@@ -2,7 +2,7 @@
 
 # FrameFit Extension
 
-Current version: **2.5.1**
+Current version: **2.5.2**
 
 [Download FrameFit Extension.zip](https://github.com/band-band/FrameFit-Extension/releases/latest/download/FrameFit.Extension.zip)
 
@@ -71,6 +71,10 @@ This repository distributes the installable extension only. Development tools,
 tests, editable artwork, and development history are maintained separately.
 The ZIP necessarily includes the JavaScript, HTML, CSS, fonts, and images Chrome
 runs; those bundled files can be inspected.
+
+Version 2.5.2 repairs stale YouTube player sizing when switching to the next video.
+53 YouTube fixture checks passed, including next-video transitions in both modes.
+Real YouTube transitions still need an installed-extension smoke test.
 
 Version 2.5.1 corrects the mode names without changing your saved selection or player behavior.
 
