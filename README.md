@@ -2,12 +2,12 @@
 
 # FrameFit Extension
 
-Current version: **2.5.0**
+Current version: **2.5.1**
 
 [Download FrameFit Extension.zip](./FrameFit%20Extension.zip?raw=true)
 
 Make room to watch. FrameFit turns supported video fullscreen buttons into
-**Tab View**, **Theater Mode**, or native **Picture in Picture**.
+**Theater Mode**, **Tab View**, or native **Picture in Picture**.
 
 ## Studio menu
 
@@ -32,16 +32,16 @@ Requires Chrome 119 or later. Websites start off until you enable them.
 ## Use and update
 
 Choose a viewing mode, then click a video's fullscreen button or use **Alt+Shift+V**.
-Tab View fills the page while keeping browser controls. Theater Mode puts the
+Theater Mode fills the page while keeping browser controls. Tab View puts the
 same video tab in a separate window with Chrome's title and URL bars. Picture in
 Picture floats above other apps; some videos do not allow it.
 
-In Theater Mode, **Return to tab** or **Esc** restores the page and returns the same
+In Tab View, **Return to tab** or **Esc** restores the page and returns the same
 video tab. The window's native **X** closes the video tab. Close confirmation
 defaults on, but Chrome controls when its generic Leave/Cancel warning appears.
-Settings includes close confirmation and a switch to restore hidden Theater tips.
+Settings includes close confirmation and a switch to restore hidden Tab View tips.
 
-For updates, exit Theater Mode, replace the contents of your existing installation
+For updates, exit Tab View, replace the contents of your existing installation
 folder with the new package, reload FrameFit at `chrome://extensions`, and refresh
 video tabs. **After upgrading to 2.5.0, enable each video website in the menu.**
 Global, viewing-mode, close-confirmation, and tip preferences are retained.
@@ -54,6 +54,8 @@ This repository distributes the installable extension only. Development tools,
 tests, editable artwork, and development history are maintained separately.
 The ZIP necessarily includes the JavaScript, HTML, CSS, fonts, and images Chrome
 runs; those bundled files can be inspected.
+
+Version 2.5.1 corrects the mode names without changing your saved selection or player behavior.
 
 Version 2.5.0 redesigns the menu and adds explicit site opt-in. It retains the
 YouTube sizing and X playback repairs from 2.4.6. Takeover is not implemented.
