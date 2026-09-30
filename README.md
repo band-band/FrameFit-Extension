@@ -2,9 +2,9 @@
 
 # FrameFit Extension
 
-Current version: **2.5.2**
+Current preview: **2.6.0**
 
-[Download FrameFit Extension.zip](https://github.com/band-band/FrameFit-Extension/releases/latest/download/FrameFit.Extension.zip)
+[Download FrameFit Extension.zip](https://github.com/band-band/FrameFit-Extension/releases/download/v2.6.0/FrameFit.Extension.zip)
 
 Use this direct download to install FrameFit. GitHub's **Code > Download ZIP** and
 **Source code (zip)** download the repository, which contains the extension ZIP.
@@ -20,20 +20,21 @@ Make room to watch. FrameFit turns supported video fullscreen buttons into
 
 The new menu has a visual mode preview, a larger green master switch, and settings
 behind the gear. Choose **Studio Dark** or **Studio Light**. Fonts are bundled
-locally. **Takeover** is marked Coming soon and cannot be selected yet.
+locally. **Takeover** now offers an always-on-top player with custom controls.
 
-## Planned: Takeover
+## Takeover
 
-Open the video in a separate window positioned over the browser, matching its size
-when opened. The intended view keeps the player's controls without Chrome tabs or
-the address bar; a small native title bar remains. **Esc** or **Return to tab**
-would restore the video to its original browser window.
+Takeover opens an always-on-top Document Picture-in-Picture window with FrameFit's
+play/pause, seek, mute, volume, and Return to tab controls. Select Takeover, enable
+the site, then use the video's fullscreen button or Alt+Shift+V. The existing
+native Picture in Picture mode remains available separately.
 
-This is a design proposal, not an implemented mode. Matching the initial bounds
-and how Chrome displays the popup need testing. It would not track the original
-browser perfectly when that browser moves or resizes.
-
-Proposed menu description: **Video takes the window. Leave the browser clutter behind.**
+Esc, Return to tab, or closing the floating window restores the original video.
+Navigation closes Takeover so the site can load its next page normally. Chrome
+controls the floating window's position and size limits; it does not follow the
+browser. It requires Document PiP support and a top-level video page. Embedded or
+restricted videos may not work. Site quality menus, playlist controls, and captions
+drawn outside the video are not copied. Seeking is disabled for indefinite live streams.
 
 ## Install
 
@@ -79,10 +80,10 @@ Real YouTube transitions still need an installed-extension smoke test.
 Version 2.5.1 corrects the mode names without changing your saved selection or player behavior.
 
 Version 2.5.0 redesigns the menu and adds explicit site opt-in. It retains the
-YouTube sizing and X playback repairs from 2.4.6. Takeover is not implemented.
+YouTube sizing and X playback repairs from 2.4.6. Takeover is added in 2.6.0.
 The floating Minimize control remains removed.
 
-34 background/settings tests and the package audit passed. The implemented popup
+35 background/settings tests, 20 dedicated Takeover fixture checks, and the 23-file package audit passed. Real Document PiP opened a generated video and restored it in the in-app browser. Takeover is a preview pending real-site compatibility checks. Generic player and Twitch regression runs were inconclusive due to loaded-extension interference; see the release notes. The implemented popup
 was checked in a browser fixture with simulated Chrome APIs, including both
 themes, preference saving, site opt-in, unsupported pages, and loading/saving
 errors. This is not installed-Chrome verification; the native popup and close
