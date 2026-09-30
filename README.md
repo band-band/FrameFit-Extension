@@ -2,15 +2,21 @@
 
 # FrameFit Extension
 
-Current version: **2.4.6**
+Current version: **2.5.0**
 
 [Download FrameFit Extension.zip](./FrameFit%20Extension.zip?raw=true)
 
-FrameFit lets you watch video in a compact browser window, fill the current tab, or use native Picture-in-Picture. Includes global and per-site switches and four menu themes.
+Make room to watch. FrameFit turns supported video fullscreen buttons into
+**Tab View**, **Theater Mode**, or native **Picture in Picture**.
 
-## Menu preview
+## Studio menu
 
-<img src="./framefit-menu.jpg" alt="FrameFit menu in Light purple, showing viewing modes and per-site settings" width="360">
+<img src="./framefit-studio-dark.png" alt="Studio Dark menu in charcoal and lavender" width="352">
+<img src="./framefit-studio-light.png" alt="Studio Light menu in white and blue" width="352">
+
+The new menu has a visual mode preview, a larger green master switch, and settings
+behind the gear. Choose **Studio Dark** or **Studio Light**. Fonts are bundled
+locally. **Takeover** is marked Coming soon and cannot be selected yet.
 
 ## Install
 
@@ -18,23 +24,46 @@ FrameFit lets you watch video in a compact browser window, fill the current tab,
 2. Open `chrome://extensions` in Chrome and enable **Developer mode**.
 3. Click **Load unpacked** and select the extracted folder containing `manifest.json`.
 4. Refresh existing video tabs and pin FrameFit from Chrome's Extensions menu.
+5. Open FrameFit on a video website and turn on **Enable on this site**.
 
-Keep the extracted folder in place. Chrome loads the extension from that folder. Requires Chrome 119 or later.
+Keep the extracted folder in place. Chrome loads the extension from that folder.
+Requires Chrome 119 or later. Websites start off until you enable them.
 
 ## Use and update
 
-Click a video's fullscreen button, or use **Alt+Shift+V**. Select your preferred viewing mode in FrameFit's menu.
+Choose a viewing mode, then click a video's fullscreen button or use **Alt+Shift+V**.
+Tab View fills the page while keeping browser controls. Theater Mode puts the
+same video tab in a separate window with Chrome's title and URL bars. Picture in
+Picture floats above other apps; some videos do not allow it.
 
-In compact view, **Return to tab** or **Esc** restores the page and returns the same video tab. The window's native **X** closes the video tab. Close confirmation defaults on, but Chrome controls when its generic Leave/Cancel warning appears.
+In Theater Mode, **Return to tab** or **Esc** restores the page and returns the same
+video tab. The window's native **X** closes the video tab. Close confirmation
+defaults on, but Chrome controls when its generic Leave/Cancel warning appears.
+Settings includes close confirmation and a switch to restore hidden Theater tips.
 
-For updates, exit compact view, replace the contents of your existing installation folder with the new package, reload FrameFit at `chrome://extensions`, and refresh video tabs. Keeping the same installation folder helps retain preferences.
+For updates, exit Theater Mode, replace the contents of your existing installation
+folder with the new package, reload FrameFit at `chrome://extensions`, and refresh
+video tabs. **After upgrading to 2.5.0, enable each video website in the menu.**
+Global, viewing-mode, close-confirmation, and tip preferences are retained.
+The old Chrome light palette becomes Studio Light; other old palettes become
+Studio Dark.
 
 ## About this download
 
-This repository distributes the installable extension only. Development tools, tests, editable artwork, and development history are maintained separately. The ZIP necessarily includes the JavaScript, HTML, CSS, and images Chrome runs; those bundled files can be inspected.
+This repository distributes the installable extension only. Development tools,
+tests, editable artwork, and development history are maintained separately.
+The ZIP necessarily includes the JavaScript, HTML, CSS, fonts, and images Chrome
+runs; those bundled files can be inspected.
 
-Version 2.4.6 fixes X black screens caused by page updates and preserves already-playing videos during expansion, while respecting manual pause. It retains explicit YouTube video and control sizing on entry and after Escape or fullscreen-button exit, including later browser resizing in both Fill current tab and compact mode. It retains the previous improvements: FrameFit opens compact view in a smaller normal window, handles responsive YouTube player moves, keeps its bottom controls inside the player, and makes its fullscreen button toggle back out. X/Twitter uses its video-and-controls component for expansion and supports the English-labeled fullscreen toggle. The floating Minimize control remains removed.
+Version 2.5.0 redesigns the menu and adds explicit site opt-in. It retains the
+YouTube sizing and X playback repairs from 2.4.6. Takeover is not implemented.
+The floating Minimize control remains removed.
 
-Targeted X class-replacement and playback-recovery fixtures passed, and live X playback continued through repeated expansion and exit without a manual Play click in the in-app browser. The full X fixture remains inconclusive because the installed extension interferes with its keyboard check. Native compact-window playback and Chrome dialogs still need separate verification. Previous YouTube validation is recorded in the development repository.
+34 background/settings tests and the package audit passed. The implemented popup
+was checked in a browser fixture with simulated Chrome APIs, including both
+themes, preference saving, site opt-in, unsupported pages, and loading/saving
+errors. This is not installed-Chrome verification; the native popup and close
+dialog still need a real Chrome smoke test. Earlier player checks were not rerun
+for this menu update.
 
 [Privacy policy](PRIVACY.md)
